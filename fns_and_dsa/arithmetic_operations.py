@@ -1,13 +1,14 @@
-def perform_operation(num1: float, num2: float, operation: str):
-    if operation == "add":
+def perform_operation(num1, num2, operation):
+    """Perform a basic arithmetic operation on two numbers."""
+    if operation == "+":
         return num1 + num2
-    elif operation == "subtract":
+    elif operation == "-":
         return num1 - num2
-    elif operation == "multiply":
+    elif operation == "*":
         return num1 * num2
-    elif operation == "divide":
+    elif operation == "/":
         if num2 == 0:
-            return "Cannot divide by zero"
+            raise ValueError("Cannot divide by zero.")
         return num1 / num2
     else:
-        return "Invalid operation"
+        raise ValueError("Invalid operation. Use '+', '-', '*', or '/'.")
